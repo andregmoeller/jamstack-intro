@@ -23,6 +23,8 @@ const reducer = (state, action) => {
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
+  const setStatus = status => dispatch({ type: 'updateStatus', status });
+
   const updateFieldValue = field => event => {
     dispatch({
       type: 'updateFieldValue',
@@ -33,7 +35,11 @@ const Form = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    setStatus('PENDING');
+
+    // TODO actually send the message
     console.log(state);
+    setTimeout(() => setStatus('SUCCESS'), 1000)
   };
 
   if (state.status === 'SUCCESS') {
