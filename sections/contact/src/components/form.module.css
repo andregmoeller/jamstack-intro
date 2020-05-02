@@ -36,3 +36,25 @@
   display: block;
   font-size: 1.25rem;
 }
+
+* Sucess and error message styles */
+.success,
+.error {
+  border-radius: 0.25rem;
+  display: block;
+  margin: 0.75rem auto 0;
+  max-width: 500px;
+  text-align: center;
+}
+
+.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+  padding: 2rem;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  padding: 1rem;
+}
