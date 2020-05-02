@@ -1,6 +1,7 @@
 [build]
   functions = "functions"
 
+# for whatever reason netlify dev is unable to parse the redirects
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
